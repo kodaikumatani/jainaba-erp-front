@@ -3,6 +3,7 @@ import axios from 'axios';
 import BasicTabs from '@/features/dashboard/components/BasicTabs';
 import { NextPage } from 'next';
 import { SalesTable } from '@/features/dashboard/types/salesTable';
+import { GraphLegend } from '@/features/dashboard/components/GraphLegend';
 
 function Index() {
   const [store, setStore] = useState<SalesTable[]>([]);
@@ -15,7 +16,8 @@ function Index() {
     getData();
   }, []);
 
-  return <BasicTabs items={store} />;
+  // return <BasicTabs items={store} />;
+  return <GraphLegend items={store} />;
 }
 
 export default Index;

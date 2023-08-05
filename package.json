@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "kakinohatei-sales-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.1",
     "@types/node": "20.4.4",
     "@types/react": "18.2.15",
