@@ -10,7 +10,6 @@ type Props = {
 };
 
 export const PieChartWithPaddingAngle = ({ items, sx }: Props) => {
-  const total = 200;
   return (
     <Box sx={{ ...sx, position: 'relative' }}>
       <Typography
@@ -25,7 +24,7 @@ export const PieChartWithPaddingAngle = ({ items, sx }: Props) => {
           transform: 'scale(1.5)',
         }}
       >
-        ¥ {total.toLocaleString()}
+        ¥ {items.values.toLocaleString()}
       </Typography>
       <ResponsiveContainer height={'100%'} width={'100%'}>
         <PieChart>
