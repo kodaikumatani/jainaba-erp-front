@@ -3,6 +3,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { SalesTable } from '../types/salesTable';
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS } from '../constants/color';
+import { calcStoreTotal } from '../utils/calcStoreTotal';
 
 type Props = {
   items: SalesTable[];
@@ -24,7 +25,7 @@ export const PieChartWithPaddingAngle = ({ items, sx }: Props) => {
           transform: 'scale(1.5)',
         }}
       >
-        ¥ {items.values.toLocaleString()}
+        ¥ {calcStoreTotal(items).toLocaleString()}
       </Typography>
       <ResponsiveContainer height={'100%'} width={'100%'}>
         <PieChart>
